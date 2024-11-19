@@ -1,0 +1,11 @@
+alumni login:
+register no:13352092
+password:sivakumar
+------------------------
+student login:
+register no: 23352092
+password:gokul
+---------------------------
+adminlogin:
+register no: 5858
+password:admin

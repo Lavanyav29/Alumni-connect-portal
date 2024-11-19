@@ -1,0 +1,372 @@
+/* Global Styles */
+body {
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #a8c8e0, #d0e7f2);
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease;
+    animation: fadeInBackground 0.5s ease-in-out;
+}
+
+/* Navbar Slide-in Animation */
+header {   
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+    top: 0;
+    z-index: 10;
+    animation: slideDownNav 0.8s ease-out;
+    background: linear-gradient(45deg, #6a49a0, #4c5594);
+  
+    text-align: center;
+}
+
+@keyframes slideDownNav {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust this height as needed */
+}
+nav {
+    background: linear-gradient(45deg, #6a49a0, #4c5594);
+    padding: 4px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav a:hover {
+   
+    color: gold;
+ 
+    transition: color 0.3s ease-in-out;
+}
+
+.college-logo {
+    width: 250px; /* Adjust the width to match the previous h1 size */
+    height: auto; /* Maintain aspect ratio */
+    /* Optional: add border-radius if you want rounded corners */
+    /* border-radius: 10px; */
+}
+.college-title h2 {
+    font-size: 1.5em;
+    color: white;
+    margin: 0;
+    display: block;
+}
+/* Content Fade-in and Scale-up Animation */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    animation: fadeInScale 1.5s ease-in-out;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+main h1 {
+    font-size: 3em;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.2em;
+    color: #333;
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Smooth Form Fly-in and Fade-in */
+form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    animation: formFlyIn 1.2s ease-out;
+}
+
+@keyframes formFlyIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Buttons with Pulse Animation */
+button {
+    background: linear-gradient(to right, #007bff, #0066cc);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: pulseButton 1.5s infinite;
+}
+
+@keyframes pulseButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button:hover {
+    background: linear-gradient(to right, #0056b3, #004080);
+    transform: scale(1.1);
+}
+
+/* Cards Animation */
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 800px;
+    text-align: left;
+    animation: fadeInCard 0.8s ease-out;
+}
+
+@keyframes fadeInCard {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade-in Background Animation */
+@keyframes fadeInBackground {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 2em;
+    }
+
+    main p {
+        width: 90%;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+}
+
+/* Input Fields with Focus Effects */
+input, select, textarea {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border: 1px solid #0066cc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5); /* Focus shadow */
+}
+/* Common Card Styling */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.card img {
+    width: 100%; /* Full width image */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures the full image is displayed without cropping */
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px; /* Added margin for spacing */
+    color: #333;
+    text-align: left; /* Left align the title */
+    font-weight: bold; /* Bold title */
+}
+
+.card h4 {
+    font-size: 16px;
+    margin: 0 0 10px; /* Margin below company name */
+    color: #555; /* Slightly lighter color */
+    text-align: left; /* Left align the company name */
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+    text-align: left; /* Left align description */
+    overflow: hidden; /* Prevent overflow */
+    display: -webkit-box; /* For two-line truncation */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Show only 2 lines */
+    margin: 0 0 15px; /* Margin below description */
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column; /* Arrange buttons vertically */
+    gap: 5px; /* Spacing between buttons */
+    margin-top: auto; /* Push buttons to the bottom */
+    width: 50%; /* Full width for buttons */
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px; /* Medium padding */
+    border: none;
+    margin: 5px;
+    border-radius: 4px; /* Small radius for a lean design */
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Darken on hover */
+    box-shadow: 0px 2px 5px rgba(76, 175, 80, 0.6); /* Slight shadow */
+}
+header {
+    background-color: #005a9e; /* Change as needed */
+    padding: 10px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* Hide the dropdown by default */
+    position: absolute;
+    background-color: white; /* Background color for the dropdown */
+    min-width: 160px; /* Width of the dropdown */
+    z-index: 1; /* Ensure dropdown is above other content */
+}
+
+.dropdown-content a {
+    color: black; /* Color of dropdown links */
+    padding: 12px 16px; /* Spacing inside dropdown links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make dropdown links block elements */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Change background on hover for dropdown links */
+}
